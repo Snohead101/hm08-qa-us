@@ -4,13 +4,30 @@ module.exports = {
     toField: '#to',
     phoneNumberField: '#phone',
     codeField: '#code',
+    cardNumberField: '#number',
+    cardCodeField: '#code.card-input',
+    messageField: '#comment.input',
+    iceScreamCounter: '.counter-value',
     // Buttons
     callATaxiButton: 'button=Call a taxi',
     phoneNumberButton: '//div[starts-with(text(), "Phone number")]',
     nextButton: 'button=Next',
     confirmButton: 'button=Confirm',
+    supportivePlanButton: 'div=Supportive',
+    paymentMethodButton: '.pp-text',
+    addCardButton: '.pp-plus-container',
+    linkButton: 'button=Link',
+    cardButton: 'div=Card',
+    orderButton: 'button.smart-button',
+    messageButton: '//label[starts-with(text(), "Message to the driver...")]',
+    blanketAndHandkerchiefsButton: '.r-sw',
+    blanketAndHandkerchiefsSwitch: '.switch-input',
+    iceScreamAdd: '.counter-plus',
+
+    
     // Modals
     phoneNumberModal: '.modal',
+    orderModal: '.order.shown',
     // Functions
     fillAddresses: async function(from, to) {
         const fromField = await $(this.fromField);
