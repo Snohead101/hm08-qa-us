@@ -1,13 +1,13 @@
 const page = require('../../page');
 const helper = require('../../helper')
 
-describe('task 1', () => {
+describe('Project 8 (8 tests)', () => {
 
     it('setting the address', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
-        const supportivePlanButton = await $(page.supportivePlanButton); // to check if the addresses' have been filled
-        await supportivePlanButton.waitForDisplayed({ timeout: 20000 }); // to check if the addresses' have been filled
+        const supportivePlanButton = await $(page.supportivePlanButton);
+        await expect(supportivePlanButton).toBeExisting();
 
     })
     
@@ -17,8 +17,8 @@ describe('task 1', () => {
         const supportivePlanButton = await $(page.supportivePlanButton);
         await supportivePlanButton.waitForDisplayed({ timeout: 20000 });
         await supportivePlanButton.click();
-        const blanketAndHandkerchiefsButton = await $(page.blanketAndHandkerchiefsButton); // to check if Suportive plan is active
-        await blanketAndHandkerchiefsButton.waitForDisplayed({ timeout: 20000 }); // to check if Suportive plan is active
+        const blanketAndHandkerchiefsButton = await $(page.blanketAndHandkerchiefsButton);
+        await expect(blanketAndHandkerchiefsButton).toBeExisting();
 
     })
 
@@ -124,7 +124,7 @@ describe('task 1', () => {
         await orderButton.click();
         await browser.pause({ pauseTime: 2000 });
         const orderModal = await $(page.orderModal);
-        await orderModal.waitForDisplayed({ timeout: 40000 });
+        await expect(orderModal).toBeExisting();
 
     })
 
